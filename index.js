@@ -5,6 +5,8 @@ const cors = require("cors")
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
 const otpGenerator = require('otp-generator');
+const cron = require('node-cron');
+const axios = require('axios')
 
 const UserModel = require('./models/User')
 const ProductModel = require('./models/Product')
