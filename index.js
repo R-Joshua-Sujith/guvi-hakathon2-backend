@@ -33,7 +33,7 @@ app.get("/active", async (req, res) => {
 
 app.get('/scheduled-api', (req, res) => {
     // Make the API request to your endpoint
-    axios.get('https://guvi2-hackathon-backend-joshua.onrender.com/active')
+    axios.get('http://localhost:5000/active')
         .then(response => {
             console.log(response.data);
             res.send('API request sent successfully');
@@ -45,7 +45,7 @@ app.get('/scheduled-api', (req, res) => {
 });
 
 cron.schedule('*/10 * * * *', () => {
-    axios.get('http://localhost:5000/scheduled-api')
+    axios.get('http://localhost:5000//scheduled-api')
         .then(response => {
             console.log(response.data);
         })
