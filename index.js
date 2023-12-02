@@ -196,13 +196,13 @@ app.post('/forgot-password', async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'joshuasujith14@gmail.com',
-            pass: process.env.PASS_KEY,
+            user: 'indrajeethr2@gmail.com',
+            pass: "ijrgodnvoawcpzym",
         },
     });
 
     const mailOptions = {
-        from: 'joshuasujith14@gmail.com',
+        from: 'indrajeethr2@gmail.com',
         to: email,
         subject: 'Password Reset',
         text: `You are receiving this email because you requested a password reset. Your OTP is: ${otp}`,
